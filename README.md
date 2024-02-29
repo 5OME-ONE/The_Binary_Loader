@@ -20,7 +20,7 @@ generic abstractions for all common components used in binary formats,
 such as headers describing the binary’s target and properties, lists of sections, sets of relocations, symbol tables, and so on. On Ubuntu, libbfd is part
 of the binutils-dev package.
 You can find the core libbfd API in /usr/include/bfd.h.
-## **prerequisites **
+## **prerequisites**
 Install the **GNU project** (if not already installed), You can use these commands to do that:
 ```
 sudo apt update
