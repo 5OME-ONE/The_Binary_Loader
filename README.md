@@ -32,23 +32,23 @@ sudo apt install binutils-dev
 ## **How to install**
 * **Automatic  Intstallation:**
 
-    Open your linux terminal and run the following commands:
-    ```
-    chmod +x install.sh
-    ./install.sh
-    ```
-    ---
+        Open your linux terminal and run the following commands:
+        ```
+        chmod +x install.sh
+        ./install.sh
+        ```
+        ---
 
 * **Manual Installation:**
-1. Compile the **"loader_demo.cc"** file an link it with **"load.o"** with the flag **"-lbfd."**
-
-    ```
-    sudo g++ -std=c++11 -o load loader_demo.cc loader.o -lbfd
-    ```
-2. Move the files **"bfd.h, loader.h, loader.o, load"** to the **"/usr/bin"** directory.
-    ```
-    sudo mv bfd.h loader.h loader.o load /usr/bin
-    ```
+    1. Compile the **"loader_demo.cc"** file an link it with **"load.o"** with the flag **"-lbfd."**
+    
+        ```
+        sudo g++ -std=c++11 -o load loader_demo.cc loader.o -lbfd
+        ```
+    2. Move the files **"bfd.h, loader.h, loader.o, load"** to the **"/usr/bin"** directory.
+        ```
+        sudo mv bfd.h loader.h loader.o load /usr/bin
+        ```
 
 ## **Loader API**
 At its core, the whole API centers around only two functions. 
@@ -66,10 +66,7 @@ Besides the loader, I added a small terminal interface called **"load"** to make
 
 If you want to display more, Use the [**bfd.h manual**](https://ftp.gnu.org/old-gnu/Manuals/bfd-2.9.1/html_mono/bfd.html) to implement it into the load program 
 
-**Run the next command to figure out how to use the load interface**:
-```
-load --help
-```
+
 ## **How to use**
 
 There are 6 options in the interface:
@@ -80,7 +77,8 @@ There are 6 options in the interface:
     ```
 
 * Shows the help menu (equivalent to -h).
-![alt text](Images/1.png)
+  
+    ![alt text](Images/1.png)
 
     ---
 
@@ -129,7 +127,7 @@ There are 6 options in the interface:
     load -all <Binary>
     ```
 
-* Shows the details of the loaded binary.
+* Shows all previous details of the loaded binary together.
 ![alt text](Images/5.png)
 ![alt text](Images/6.png)
 
