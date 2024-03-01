@@ -30,11 +30,25 @@ sudo apt install binutils-dev
 
 
 ## **How to install**
-Open your linux terminal and run the following commands:
-```
-chmod +x install.sh
-./install.sh
-```
+* **Automatic  Intstallation:**
+
+    Open your linux terminal and run the following commands:
+    ```
+    chmod +x install.sh
+    ./install.sh
+    ```
+    ---
+
+* **Manual Installation:**
+1. Compile the **"loader_demo.cc"** file an link it with **"load.o"** with the flag **"-lbfd."**
+
+    ```
+    sudo g++ -std=c++11 -o load loader_demo.cc loader.o -lbfd
+    ```
+2. Move the files **"bfd.h, loader.h, loader.o, load"** to the **"/usr/bin"** directory.
+    ```
+    sudo mv bfd.h loader.h loader.o load /usr/bin
+    ```
 
 ## **Loader API**
 At its core, the whole API centers around only two functions. 
@@ -56,6 +70,88 @@ If you want to display more, Use the [**bfd.h manual**](https://ftp.gnu.org/old-
 ```
 load --help
 ```
+## **How to use**
+
+There are 6 options in the interface:
+
+1. 
+    ```
+    load --help
+    ```
+
+* Shows the help menu (equivalent to -h).
+![alt text](Images/1.png)
+
+    ---
+
+
+
+
+2. 
+    ```
+    load -d <Binary>
+    ```
+
+* Shows the details of the loaded binary.
+![alt text](Images/2.png)
+
+    ---
+
+
+
+
+3. 
+    ```
+    load -sec <Binary>
+    ```
+
+* Shows the  sections details of the loaded binary.
+![alt text](Images/3.png)
+
+    ---
+
+
+
+4. 
+    ```
+    load -sym <Binary>
+    ```
+
+* Shows the symbols details of the loaded binary.
+![alt text](Images/4.png)
+
+    ---
+
+
+
+5. 
+    ```
+    load -all <Binary>
+    ```
+
+* Shows the details of the loaded binary.
+![alt text](Images/5.png)
+![alt text](Images/6.png)
+
+    ---
+
+
+
+6. 
+    ```
+    load -con <section_name> <Binary>
+    ```
+
+* Shows the row data of the mentioned section.
+![alt text](Images/7.png)
+
+---
+$~$
+$~$
+$~$
+
+
+
 
 ## **References/Resources**
 * The  [Practical Binary Analysis](https://practicalbinaryanalysis.com/) book chapter 4
