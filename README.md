@@ -32,12 +32,13 @@ sudo apt install binutils-dev
 ## **How to install**
 * **Automatic  Intstallation:**
 
-        Open your linux terminal and run the following commands:
-        ```
-        chmod +x install.sh
-        ./install.sh
-        ```
-        ---
+   * Open your linux terminal and run the following commands:
+     
+     ```
+     chmod +x install.sh
+     ./install.sh
+     ```
+  
 
 * **Manual Installation:**
     1. Compile the **"loader_demo.cc"** file an link it with **"load.o"** with the flag **"-lbfd."**
@@ -140,13 +141,10 @@ There are 6 options in the interface:
     load -con <section_name> <Binary>
     ```
 
-* Shows the row data of the mentioned section.
+* Shows the row data of the mentioned section.                        
 ![alt text](Images/7.png)
 
 ---
-$~$
-$~$
-$~$
 
 
 
